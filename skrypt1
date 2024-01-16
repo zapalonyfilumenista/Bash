@@ -1,0 +1,21 @@
+#!/bin/bash
+
+echo "Zadanie ze skryptów"
+echo "Skrypt liczy sumę dwóch podanych przez Ciebie liczb"
+
+echo "podaj pierwszą liczbę"
+read PIERWSZA_LICZBA
+
+echo "podaj drugą liczbę"
+read DRUGA_LICZBA
+
+if [ "$PIERWSZA_LICZBA" -eq "$DRUGA_LICZBA" ]
+	then
+	echo "Błąd! Podane liczby nie są różne!"
+else
+	WYNIK=$(($PIERWSZA_LICZBA + $DRUGA_LICZBA))
+	echo "Suma podanych liczb wynosi: $WYNIK"
+fi
+
+
+

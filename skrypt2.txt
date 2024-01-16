@@ -1,0 +1,17 @@
+#!/bin/bash
+
+echo "Skrypt zawiera funkcję, która oblicza iloraz parametru 1 przez parametr 2"
+
+funkcja()
+{
+	echo "liczba parametrów: $#, nazwa programu: $0, lista parametrów $@"
+
+	if [ "$2" -eq 0 ]
+	then
+		echo "Parametr 2 jest równy 0 - nie można podzielić liczb"
+	else
+		echo "reszta z dzielenia $1 przez $2 wynosi: $(($1 % $2))"
+	fi
+}
+
+funkcja "$1" "$2" #wywołanie funkcji

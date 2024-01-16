@@ -1,0 +1,20 @@
+#!/bin/bash
+
+echo „Funkcja wyswietla wyniki operacji matematycznych trzech liczb”
+
+funkcja()
+{
+	echo "suma wynosi: $(( $1 + $2 + $3 ))"
+	echo "różnica wynosi: $(( $1 - $2 - $3))"
+	echo "iloczyn wynosi: $(( $1 * $2 * $3))"
+
+	if [ $3 -eq 0 ]
+	then
+		echo "nie da się podzielić liczb (3 liczba to zero)"
+	else
+		echo "iloraz wynosi: $(( $1 / $2 / $3 ))"
+		echo "reszta z dzielenia liczby drugiej przez trzecią wynosi: $(( $2 % $3 ))"
+	fi
+}
+
+funkcja $1 $2 $3
